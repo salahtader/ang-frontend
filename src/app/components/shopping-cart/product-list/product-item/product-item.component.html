@@ -1,0 +1,48 @@
+<div class="card mb-4 " style="max-height: 442px;" [ngStyle]="getBorderColor(productItem)">
+    <div style="float: left; margin-left: -5px ">
+        <h6 class="float-left pl-0 ">{{productItem?.category?.name | uppercase}}</h6>
+        <h6 class="float-right pr-1 pt-0 anim-txt ">{{productItem?.name | uppercase}}</h6>
+    </div>
+    <div class="card-body pt-0 pl-1 pr-1 ">
+        <div class=" text-danger " style="z-index: 1; position: relative; ">
+            <i *ngIf="!addedToWishlist " (click)="handelAddToWishlist() " class="far fa-heart float-right fa-2x anim ml-4 pl-1 " title="Ajouter au wish liste "></i>
+            <i *ngIf="addedToWishlist " (click)=" handelRemoveToWishlist() " class="fas fa-heart float-right fa-2x ml-3 " title="Ajouter au wish liste "></i>
+        </div>
+        <img [src]="productItem?.imageUrl " class="card-img-top img-product ">
+
+        <p class="card-text text-center p-2 text-danger h5 ">
+
+
+            <strong> {{productItem?.price}} Dh/Kg</strong>
+
+        </p>
+
+
+    </div>
+    <div class="card-footer ">
+
+        <div class="btn-group text-center mt-2 ">
+            <button type=" button " class="btn btn-sm btn-outline-danger " (click)="handelAddToCart() ">
+                    <i class="fa fa-shopping-cart mr-1 "></i>+100g
+                </button>
+            <button type="button " class="btn btn-sm btn-outline-info " routerLink="/products/{{productItem._id}} ">
+                 <i class="fa fa-info-circle mr-1 "></i>View detail 
+                </button>
+        </div>
+
+
+
+    </div>
+    <div class="hover-effect " [ngStyle]="getColor(productItem)">
+        <br>
+        <span style="margin-left: -35px;" class="mt-5 pl-0  w-50 "> reference : {{productItem?._id}}</span>
+        <h5 class="pt-4 pb-4 mb-4 ">
+            <span>{{productItem?.category?.name}} </span>{{productItem?.name}} </h5><br>
+
+        <p class="text-justfy mt-4 ">{{productItem?.description}}</p>
+
+        <img style="margin-right: -21px;" class="align-bottom mt-5 pt-4 float-right " src="assets/products/sweet.png ">
+
+
+    </div>
+</div>

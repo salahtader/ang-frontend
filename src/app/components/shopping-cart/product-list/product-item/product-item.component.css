@@ -1,0 +1,141 @@
+.card2 {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.card {
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-left: 5px solid #cc0000e0;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-height: 442px;
+}
+
+.card:hover .hover-effect {
+    opacity: 1;
+    visibility: visible;
+    background-color: #9e4c24;
+}
+
+.card .hover-effect {
+    position: absolute;
+    background-color: #cc0000e0;
+    right: 0;
+    top: 45px;
+    bottom: 0;
+    left: -1px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 34%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    height: 304px;
+    color: antiquewhite;
+}
+
+.card .hover-effect p {
+    position: absolute;
+    top: 25%;
+    transform: translatev Y(-50%);
+    padding: 20px;
+}
+
+.hover-effect i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(250, 234, 234);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40%;
+    color: #cc0000e0;
+    margin: 20px auto 0px auto;
+    transition: all 0.5s;
+}
+
+.hover-effect i:hover {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.card-header {
+    padding: .25rem .25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    border-radius: 0%;
+}
+
+.card-footer {
+    padding: .25rem .25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    border-radius: 0%;
+}
+
+.fa-heart:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.fa-bell:hover {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.fa-bell {
+    color: black;
+}
+
+.img-product {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-top-right-radius: 32%;
+}
+
+.img-bg-side {
+    position: relative;
+    bottom: 30%;
+    right: 20%;
+}
+
+.image {
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.image:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.anim-txt {
+    animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: crimson;
+    }
+    70% {
+        color: brown;
+    }
+    100% {
+        color: burlywood;
+    }
+}
+
+.img-product {
+    margin-top: -28px;
+}

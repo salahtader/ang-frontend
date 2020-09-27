@@ -1,0 +1,26 @@
+<div class="m-5 p-5 mx-auto d-flex justify-content-center w-75 ">
+    <div class="text-center ">
+        <a href="{{productItem?.imageUrl}} " target="blank ">
+            <img src="{{productItem?.imageUrl}} " class="img-card mx-auto">
+
+        </a>
+
+    </div>
+    <div class="ptm pl-4">
+
+
+        <div class="content p-5" style="max-width: 100%;">
+            <h5 class="text-danger pb-3 pl-0 ">{{productItem?.category.name}}</h5><strong class="text-center p-2 h1">{{productItem?.name |titlecase}}: {{productItem?.price}} Dh/Kg</strong>
+            <p class="font-weight-light  pl-0 mt-2 mb-3 " style="font-size: larger;">{{productItem?.description }}{{productItem?.description }} </p>
+            <button type="button" class="btn btn-info5 ml-0 pl-0  " (click)="handelAddToCart() ">
+            <i class="fa fa-shopping-cart mr-1 "></i>
+            <span>Shop</span>
+        </button>
+            <button type="button " class="btn btn-danger " (click)="deleteProduct(productItem?._id) ">
+            <i class="fa fa-shopping-cart mr-1 "></i>
+            <span>Delete</span>
+        </button>
+        </div>
+    </div>
+
+</div>

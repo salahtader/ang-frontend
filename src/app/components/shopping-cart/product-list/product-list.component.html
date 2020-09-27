@@ -1,0 +1,60 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<mat-tab-group [disableRipple]="true" mat-align-tabs="center">
+    <mat-tab>
+        <ng-template mat-tab-label>
+
+
+            TOUS <span class="badge badge-info"> {{productList.length}}</span>
+
+        </ng-template>
+        <h1 class="text-center m-3 ">Lorem ipsum dolor sit amet.</h1>
+        <div class="container pl-5 pr-5">
+            <div class="row">
+                <div class="col-sm-4" *ngFor="let product of productList ">
+                    <app-product-item [productItem]="product" [addedToWishlist]="wishlist.indexOf(product.id) >=0">
+
+                    </app-product-item>
+                    <div class="best-shadow-right"></div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Chocolat ">
+        <ng-template mat-tab-label>
+            Chocolat <span class="badge badge-danger"> {{chocolatList.length}}</span>
+        </ng-template>
+        <div class="container pl-5 pr-5">
+            <h1 class="text-center m-3 ">Lorem ipsum dolor sit amet.</h1>
+            <div class="row">
+                <div class="col-sm-4" *ngFor="let product of chocolatList ">
+                    <app-product-item [productItem]="product" [addedToWishlist]="wishlist.indexOf(product.id) >=0"></app-product-item>
+                    <div class="best-shadow-right"></div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Nougat ">
+        <ng-template mat-tab-label>
+
+
+            Nougat <span class="badge badge-warning"> {{nougatList.length}}</span>
+        </ng-template>
+        <div class="container pl-5 pr-5">
+            <h1 class="text-center m-3 ">Lorem ipsum dolor sit amet.</h1>
+
+            <div class="row">
+                <div class="col-sm-4" *ngFor="let product of nougatList ">
+                    <app-product-item [productItem]="product" [addedToWishlist]="wishlist.indexOf(product.id) >=0">
+                        <loading></loading>
+                    </app-product-item>
+                    <div class="best-shadow-right"></div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

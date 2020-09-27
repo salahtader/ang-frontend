@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <button class="navbar-toggler float-left " type="button " aria-controls="navbarContent " [attr.aria-expanded]="!collapsed " aria-label="Toggle navigation " (click)="collapsed=! collapsed ">
+        <span class="navbar-toggler-icon "></span>
+    </button>
+    <a routerLink="/home">
+        <img class="logo" [src]="(imgPath + logo)" />
+
+        <span class="navbar-brand mb-0 h1 " value="title">{{title}}</span>
+    </a>
+
+
+    <div class="navbar-collapse " [class.collapse]="collapsed " id="navbarContent ">
+
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item ">
+                <a routerLink="/home" class="nav-link " routerLinkActive="active-link" tabindex="0 " role="button ">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item " *ngIf="authService.loggedIn()">
+                <a routerLink="/shop" class=" nav-link " routerLinkActive="active-link" tabindex="0" role="button">
+                    Shop
+                </a>
+            </li>
+            <li class="nav-item " *ngIf="authService.loggedIn()">
+                <a routerLink="/products" class=" nav-link " routerLinkActive="active-link" tabindex="0" role="button">
+Boutique
+                </a>
+            </li>
+
+        </ul>
+        <div class="navbar-nav">
+            <a routerLink="/register" *ngIf="!authService.loggedIn()" class="nav-link">
+                Register
+            </a>
+            <a routerLink="/login" class="nav-link " *ngIf="!authService.loggedIn()">
+                Login
+            </a>
+            <a routerLink="/" (click)="authService.logOutUser()" class="nav-link " *ngIf="authService.loggedIn()">
+                logout
+            </a>
+        </div>
+
+    </div>
+
+    <div class="navbar-right nav-cart">
+        <a class="" routerLink="/shop">
+            <i class=" fa fa-shopping-bag fa-2x mt-1 ml-2 float-right " style="float: right; "><span *ngIf="cartTotal>0 " class="pr-1 " > {{cartTotal}}</span></i>
+        </a>
+        <div class="nav-cart-container">
+
+            <!-- end cart items -->
+
+
+
+            <div class="alert-light bg-faded ">
+                <a routerLink="/shop" class="btn btn-outline-dark btn-block h-50 anim-txt  "><span>Vos achats</span></a>
+
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,22 @@
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+jobs:
+  build-and-test:
+    working_directory: ~/angecommerce
+    docker:
+      - image: circleci/node:12-browsers
+    steps:
+      - checkout
+      - restore_cache:
+        key: angecommerce-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - run: npm install
+      - save_cache:
+          key: angecommerce-{{ .Branch }}-{{checksum "package-lock.json"}}
+          path:
+            - "node_modules"
+      - run: npm run test --no-watch --no-progress --browsers=ChromeHeadlessCI
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test

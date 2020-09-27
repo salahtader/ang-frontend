@@ -1,0 +1,12 @@
+<mat-card [ngStyle]="{'background': 'url(' + cartItem?.productId.imageUrl + ') 55px 465px'}" style="background-size: 25% !important;text-shadow: rgb(252 255 184 / 50%) 0px 0px 3px;height:85px ;transition: transform 2s; background-position: top;">
+    <div #id class="float-left pr-5">
+        <a routerLink="/products/{{cartItem.productId._id}}">
+            <h5 class=" my-0 red "><strong> {{ cartItem?.productId.name |titlecase}}</strong></h5>
+        </a>
+        <small class="text-muted pl-3 ">Quantités :   
+        <strong class="text-gray-dark">{{cartItem?.qty}}00</strong>  grammes</small>
+
+    </div>
+    <i class=" fa fa-close  float-right trash " (click)="removeOrder(cartItem) " title="{{cartItem._id}} "> </i>
+    <span class=" float-right text-white pt-3 h1 " style="margin-right: -20px; "><strong> {{(cartItem?.qty * cartItem?.productId.price) }}</strong></span>
+</mat-card>

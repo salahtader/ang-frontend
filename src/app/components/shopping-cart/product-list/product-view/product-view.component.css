@@ -1,0 +1,111 @@
+.card {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 1px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-left: 5px solid #cc0000e0;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover .hover-effect {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card .hover-effect {
+    position: absolute;
+    background-color: #cc0000e0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    height: 90%;
+}
+
+.card .hover-effect p {
+    color: #1e1e1e;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px;
+}
+
+.hover-effect i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #1e1e1e;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #cc0000e0;
+    margin: 20px auto 0px auto;
+    transition: all 0.5s;
+}
+
+.hover-effect i:hover {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.card-header {
+    padding: .25rem .25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    border-radius: 0%;
+}
+
+.img-card {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.content {
+    padding: 20px 000;
+}
+
+.ptm {
+    padding: 12px 0
+}
+
+.ptm h5 {
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.card-footer {
+    padding: .25rem .25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    border-radius: 0%;
+}
+
+.fa-heart:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.fa-bell:hover {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.fa-bell {
+    color: black;
+}

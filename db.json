@@ -1,0 +1,79 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "chocolat ferario",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_ferario.jpg",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "name": "chocolat amande",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_amande.jpg",
+      "price": 70
+    },
+    {
+      "id": 3,
+      "name": "chocolat cheese cake",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_cheese_cake.jpg",
+      "price": 80
+    },
+    {
+      "id": 4,
+      "name": "chocolat fruit",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_fruit.jpg",
+      "price": 45
+    },
+    {
+      "id": 5,
+      "name": "chocolat noisette",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_noisette.jpg",
+      "price": 60
+    },
+    {
+      "id": 6,
+      "name": "chocolat aucaramel",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+      "imageUrl": "assets/products/chocolat_au_caramel.jpg",
+      "price": 50
+    }
+  ],
+  "cart": [
+    {
+      "product": {
+        "id": 5,
+        "name": "chocolat noisette",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+        "imageUrl": "assets/products/chocolat_noisette.jpg",
+        "price": 60
+      },
+      "id": 1
+    },
+    {
+      "product": {
+        "id": 5,
+        "name": "chocolat noisette",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia excepturi natus eaque nostrum eum quas nesciunt dolor saepe vel id",
+        "imageUrl": "assets/products/chocolat_noisette.jpg",
+        "price": 60
+      },
+      "id": 2
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 5
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 3
+    }
+  ]
+}
